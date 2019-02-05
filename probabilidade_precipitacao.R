@@ -1,4 +1,4 @@
-#Geração de uma curva de probabilidade de precipitação
+#Geração de uma curva de probabilidade de execedência de precipitação
 
 #Autora: Nicolli Albuquerque
 #Contato: albuquerquenicolli@hotmail.com
