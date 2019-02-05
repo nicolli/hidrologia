@@ -49,10 +49,11 @@
     write.table(sdd, file='prob_prec.csv', sep=';', dec='.', row.names=FALSE)
     
 #3.Visualização
-    graph_prob<-ggplot(sdd, aes(x=Probabilidade, y=TotalAnual)) + geom_line(color="black") + 
-      xlab("Probabilidade (%)") + ylab("Precipitação (mm)") + ggtitle("Probabilidade de precipitação - Posto 0000000") +
+    graph_prob<-ggplot(sdd, aes(x=TotalAnual, y=Probabilidade)) + geom_line(color="black") + 
+      xlab("Precipitação (mm)") + ylab("Probabilidade (%)") + ggtitle("Probabilidade de execdência de precipitação - Posto 0000000") +
       theme(plot.title = element_text(color="black", size=14, hjust=0.5),
             axis.title.x = element_text(color="#993333", size=8, face="bold"),
             axis.title.y = element_text(color="#993333", size=8, face="bold"))+
-      scale_x_continuous(breaks=seq(0, 100, 5),limits = c(0, 100)) + scale_y_continuous(breaks=seq(0, 1050, 50), limits = c(0, 1050))
+      scale_x_continuous(breaks=seq(0, 1050, 50), limits = c(0, 1050)) + scale_y_continuous(breaks=seq(0, 100, 5),limits = c(0, 100))
     graph_prob
+
